@@ -161,4 +161,4 @@ app.put('/image',(req,res)=>{
     
 })
 
-app.listen(process.env.PORT);
+app.listen(3000);
