@@ -41,7 +41,7 @@ app.use(cors());
 //     }
 // ]
 
-app.get('/',(req,res)=>{
+app.get('https://facedetection-be.netlify.app/',(req,res)=>{
     res.json("database will be avalable");
 })
 
