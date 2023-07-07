@@ -44,7 +44,7 @@ app.use(cors());
 // ]
 
 app.get('/',(req,res)=>{
-    res.json("database will be avalable");
+    res.json("database will be available");
 })
 
 app.post('/registor',(req,res)=>{
@@ -163,4 +163,6 @@ app.put('/image',(req,res)=>{
     
 })
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 3000, ()=>{
+    console.log('app is reunning ')
+});
