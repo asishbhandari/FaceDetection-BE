@@ -7,11 +7,13 @@ const saltRounds = 10;
 const knex = require('knex')({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
+      connectionString : 'postgres://asishdb_tz8l_user:yWjbmHh2NKYxHDx2na7XLpJLMkArpaJo@dpg-cijrr1tgkuvjvn79j2ig-a/asishdb_tz8l',
+      ssl: { rejectUnauthorized : false},
+      host: 'dpg-cijrr1tgkuvjvn79j2ig-a',
       port : 5432,
-      user : 'postgres',
-      password : 'coder',
-      database : 'Detecting-Face-DB'
+      user : 'asishdb_tz8l_user',
+      password : 'yWjbmHh2NKYxHDx2na7XLpJLMkArpaJo',
+      database : 'asishdb_tz8l'
     }
   });
 
@@ -161,4 +163,4 @@ app.put('/image',(req,res)=>{
     
 })
 
-app.listen(3000);
+app.listen(process.env.PORT);
