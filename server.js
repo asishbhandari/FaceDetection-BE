@@ -7,7 +7,7 @@ const saltRounds = 10;
 const knex = require('knex')({
     client: 'pg',
     connection: {
-      host : 'https://facedetection-be.netlify.app/',
+      host : '127.0.0.1',
       port : 5432,
       user : 'postgres',
       password : 'coder',
@@ -41,7 +41,7 @@ app.use(cors());
 //     }
 // ]
 
-app.get('https://facedetection-be.netlify.app/',(req,res)=>{
+app.get('/',(req,res)=>{
     res.json("database will be avalable");
 })
 
@@ -161,4 +161,4 @@ app.put('/image',(req,res)=>{
     
 })
 
-app.listen(3001);
+app.listen(process.env.PORT);
